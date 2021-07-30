@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <comp-header> </comp-header>
+  <comp-list-add></comp-list-add>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import compHeader from "./components/header.vue";
+import compListAdd from "./components/listAdd.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    compHeader,
+    compListAdd,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "./assets/styles/styles.css";
+@import "./assets/styles/vars.css";
+
+body,
+html {
+  background-color: var(--background-2);
 }
 </style>
